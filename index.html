@@ -73,45 +73,55 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal is-hidden">
 
-            <form class="form js-speaker-form">
+            <form class="form" autocomplete="off">
 
               <div class="close" data-modal-close>
                  <svg class="close--icon" width="11" height="11">
-                   <use href="./images/cross.svg"></use>
+                   <use href="../images/sprite.svg#icon-cross"></use>
                  </svg>
               </div>
               
-              <h3 class="modal__title">Оставьте свои данные, мы вам перезвоним</h3>
+              <h3 class="form__title">Оставьте свои данные, мы вам перезвоним</h3>
              
-                  <div class="form__field">
-                    <label for="name">Имя</label>
-                    <input class="form__input" type="text" name="name" id="name" autofocus>
-                  </div>
+                  <label class="form__field">
+                    <input class="form__input" type="text" name="name" placeholder=" " autofocus >
+                    <span class="form__label">Имя</span>
+                    <svg class="form__icon" width="18" height="18">
+                      <use href="../images/sprite.svg#icon-person"></use>
+                    </svg>
+                  </label>
 
-                  <div class="form__field">
-                    <label for="tel">Телефон</label>
-                    <input class="form__input" type="tel" name="tel" id="tel">
-                  </div>
+                  <label class="form__field">
+                    <input class="form__input" type="tel" name="tel" placeholder=" ">
+                    <span class="form__label">Телефон</span>
+                    <svg class="form__icon" width="18" height="18">
+                      <use href="../images/sprite.svg#icon-tel"></use>
+                    </svg>                  
+                  </label>
 
-                  <div class="form__field">
-                    <label for="email">Почта</label>
-                    <input class="form__input" type="email" name="email" id="name">
-                  </div>
+                  <label class="form__field">                    
+                    <input class="form__input" type="email" name="email" placeholder=" ">
+                    <span class="form__label">Почта</span>
+                    <svg class="form__icon" width="18" height="18">
+                      <use href="../images/sprite.svg#icon-email"></use>
+                    </svg>
+                  </label>
 
-                  <div class="form__field">
-                    <label for="comment">Комментарий</label>
-                    <textarea class="comment " name="comment" id="comment" rows="10"></textarea>
-                  </div>
+                  <label class="form__field">                    
+                    <textarea class="comment " name="comment" rows="10" placeholder=" "></textarea>
+                    <span class="form__label form__label--comment">Комментарий</span>
+                  </label>
 
-                  <div class="form__field form__field--checkbox">
-                    <input type="checkbox" name="policy" id="policy" >
-                    <label for="policy" class="form__policy">Соглашаюсь с рассылкой и принимаю 
+                  <label class="form__field form__field--checkbox">
+                    <input type="checkbox" name="policy" class="checkbox">
+                    <span class="checkbox__icon"></span>
+                    <span class="form__policy">Соглашаюсь с рассылкой и принимаю 
                       <a href="#" class="form__policy--link">Условия договора</a>
-                    </label>
-                  </div>
+                    </span>
+                  </label>
 
                   <div class="hero__button--form">
-                    <button class="hero__button" type="submit">Отправить</button>
+                    <button class="hero__button hero__button--submit" type="submit">Отправить</button>
                   </div>
                   
             </form>
@@ -527,7 +537,7 @@
           </address>
         </div>
 
-        <div class="page-footer__appeal">
+        <div class="">
           <b class="appeal">присоединяйтесь</b>
           
           <ul class="socials__list list">
@@ -573,15 +583,19 @@
             </li>
           </ul>
         </div>
-
-        <div class="page-footer__appeal">
-          <b class="appeal">подпишитесь на рассылку</b>
-          <a href="#" class="page-footer__button">Подписаться
-            <svg class="page-footer__button--icon" width="24" height="24">
-              <use href="../images/sprite.svg#icon-send"></use>
-            </svg>
-          </a>
-        </div>
+        
+        <form>
+            <label for="email" class="appeal">подпишитесь на рассылку</label>
+            <div class="appeal__container">
+              <input class="appeal__email" type="email" name="email" id="email" placeholder="E-mail">
+              <button href="#" class="page-footer__button">Подписаться
+                <svg class="page-footer__button--icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+        </form>
+        
         <p lang="en" class="copy container">
           2020 | Developed by GoIT Students
         </p>
